@@ -1,0 +1,17 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Rubocop" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="myUseStandardGemIfPossible" value="true" />
+      <option name="mySeverityMap">
+        <map>
+          <entry key="convention" value="WEAK WARNING" />
+          <entry key="error" value="ERROR" />
+          <entry key="fatal" value="ERROR" />
+          <entry key="refactor" value="WEAK WARNING" />
+          <entry key="warning" value="INFORMATION" />
+        </map>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
