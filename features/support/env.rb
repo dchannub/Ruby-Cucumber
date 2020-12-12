@@ -1,7 +1,5 @@
 require 'selenium-webdriver'
 
-@Browser
-
 Before do |scenario|
   @Browser = Selenium::WebDriver.for :chrome
   @Browser.manage.window.maximize
@@ -9,5 +7,9 @@ Before do |scenario|
 end
 
 After do |scenario|
-  @Browser.quit
+  if scenario.failed?
+    i = Time.now.strftime('%Y-%m-%d_%H.%M.%S')
+    name = scenario.feature.name
+    $Browser.save_screenshot("features/screenshot/screenshot_#{name}_#{i}.png")
+  end
 end

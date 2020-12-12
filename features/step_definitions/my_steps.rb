@@ -19,6 +19,7 @@ def get_testdata(testcasename)
     testdatarow = nil
     testdata = nil
 
+    # gets the col number of unique col
 
     (1..workbook.last_column).each { |k|
       colValue = workbook.cell(1, k)
@@ -38,7 +39,7 @@ def get_testdata(testcasename)
           end
         }
     else
-      raise('In the test data sheet "Testcase Nme" column is not available please make sure it is availble')
+      raise('In the test data sheet "Testcase Name" column is not available please make sure it is availble')
     end
 
     unless (testdatarow.nil?)
